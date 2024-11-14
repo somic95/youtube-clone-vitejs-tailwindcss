@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: sans-serif;
+  }
+  a {
+    @apply text-[#5a5a5a];
+  }
+  img {
+    @apply cursor-pointer;
+  }
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
+  h4 {
+    @apply text-sm font-semibold
+  }
+  p {
+      @apply text-sm;
+  }
+}
+
+/* navbar component */
+.flex-div {
+  @apply flex items-center justify-between;
+}
+nav {
+  @apply justify-center shadow-[0_0_10px_rgba(0,0,0,0.2)] bg-white sticky z-10 px-[2%] py-2.5 top-0;
+}
+.nav-middle .search-box {
+  @apply border mr-[15px] px-3 py-2 rounded-[25px] border-solid border-[#ccc];
+}
+.nav-right img {
+  @apply w-[25px] mr-[25px];
+}
+
+/* feed component */
+.card img {
+  @apply w-full rounded-[5px];
+}
+.card h2 {
+  @apply text-base text-black leading-[normal] mx-0 my-[5px];
+}
+.card h3 {
+  @apply text-sm text-[#555] mx-0 my-1.5;
+}
+.card p {
+  @apply text-sm;
+}
+
+/* playvideo component */
+.comment {
+  @apply flex items-start mx-0 my-5;
+}
+.comment img {
+  @apply w-[35px] mr-[15px] rounded-[50%];
+}
+.comment h3 {
+  @apply text-sm mb-0.5;
+}
+.comment h3 span {
+  @apply text-xs text-[#5a5a5a] font-medium ml-2;
+}
+.comment-action {
+  @apply flex items-center text-sm mx-0 my-2;
+}
+.comment-action img {
+  @apply w-5 mr-[5px] rounded-none;
+}
+.comment-action span {
+  @apply text-[#5a5a5a] mr-5;
+}
+
+/* sidebar component */
+.small-sidebar p {
+  @apply hidden;
+}
+.active img {
+  @apply mb-0.5 border-b-[3px] border-b-[red] border-solid;
+}
+
+@media (max-width: 900px) {
+  /* navbar component */
+  .menu-icon {
+    @apply hidden;
+  }
+  .nav-right img {
+    @apply hidden;
+  }
+  .nav-right .user-icon {
+    @apply block w-[30px];
+  }
+  .logo {
+    @apply w-[90px];
+  }
+  .nav-middle .search-box input {
+    @apply w-[100px];
+  }
+
+  /* sidebar component */
+  .sidebar {
+    @apply hidden;
+  }
+
+  /* home page */
+  .large-container,
+  .container {
+    @apply px-[5%] py-0;
+  }
+
+  /* video page */
+  .play-container {
+    @apply px-[5%] py-0;
+  }
+
+  /* playvideo component */
+  .play-video {
+    @apply basis-full;
+  }
+  .play-video iframe {
+    @apply w-full h-[50vw];
+  }
+  .vid-description {
+    @apply pl-0;
+  }
+  .play-video .play-video-info span {
+    @apply ml-0 mr-[15px] mt-[15px];
+  }
+
+  /* recommended component */
+  .recommended {
+    @apply basis-full;
+  }
+
+  /* feed comp */
+  .feed {
+    /* @apply pt-[40px] mt-[20p] */
+  }
+}
